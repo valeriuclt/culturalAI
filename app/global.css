@@ -1,0 +1,178 @@
+* {  font-family: Verdana, Tahoma, sans-serif;}
+
+body {
+margin: 0;
+padding: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-image: url("assets/bckgn.png");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+
+}
+
+main{
+    width: 80vw;
+    height: 80vh; 
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.6), rgba(150, 150, 150, 0.3));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 13px;
+    text-align: center;
+overflow-y: auto;
+overflow-x: hidden;
+/* overflow: hidden; */
+    color: #383838;
+}
+
+section { width: 100%;}
+
+section.populated{ 
+    /* height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end; */
+    overflow: scroll;
+    /* overflow-y: auto; */
+    overflow-x: hidden;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Păstrează alinierea și liniile noi */
+    word-break: break-word; /* Sparge textul lung */
+    overflow-wrap: anywhere; /* Flexibilitate pentru spargerea textului */
+    overflow-y: auto; /* Scroll pe verticală */
+
+}
+
+.starter-text{
+    font-weight: bold;
+    padding: 0 80px;}
+
+form {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    border-top:#828282 solid 2px ;
+    padding-top: 20px;
+    border-radius: 0 0 10px 10px ;
+    overflow: hidden;
+}
+
+input.question-box {
+    width: 85%;
+    padding: 10px;
+    font-size: 15px;
+    color: #383838;
+    border: none;
+}
+
+input[type=submit] {
+    width: 15%;
+    padding: 10px;
+    font-size: 13px;
+    color: #fff;
+    border: none;    
+    background-color: #19df15;
+}
+
+input:focus{
+    outline: none;
+}
+
+
+.bubble{
+    margin: 8px;
+    padding: 8px;
+    font-size: 13px;
+    border: none;
+    color: #383838;
+    box-shadow: #959da533 0 8px 24px;
+    width: 80%;
+    text-align: left;
+    max-width: 90%; /* Dimensiune maximă relativă la container */
+}
+.bubble.user{
+    border-radius: 20px 20px 0 20px;
+    background-color: #E1F4FFFF;
+    margin-left: auto;
+}
+.bubble.assistant {
+   
+    border-radius: 20px 20px 20px 0;   
+    background-color: #dce7ff;    
+    white-space: pre-wrap; /* Păstrează alinierea și liniile noi */
+    word-break: break-word; /* Sparge textul lung */
+    overflow-wrap: anywhere; /* Flexibilitate pentru spargerea textului */
+    overflow-y: auto; /* Scroll pe verticală */
+
+}
+.prompt-suggestion-row{
+    width: 100%;
+}
+.prompt-suggestion-button {
+    margin: 8px;
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    background-color:#b9b4b4 ;
+    border-radius: 8px;
+    /* color: #383838; */
+    color: #fff;
+    cursor: pointer;
+    box-shadow: #959da533 08px 2px;
+    transition: background-color 0.3s ease;
+}
+.prompt-suggestion-button:hover{
+    background-color: #3e8e41;   
+}
+.prompt-suggestion-button:active {
+  background-color: #2e6d33; /* culoarea de fundal la click */
+  transform: translateY(2px); /* efect de mișcare la click */
+}
+.loader{    
+    margin: 10px;
+    width: 60px;
+    aspect-ratio: 4;
+    
+    background: 
+        no-repeat radial-gradient(circle closest-side ,#038358 90%,#10310100 ) 0 50%,
+        no-repeat radial-gradient(circle closest-side ,#038358 90%,#10310100 ) 50% 50%,
+        no-repeat radial-gradient(circle closest-side ,#038358 90%,#10310100 ) 100% 50%
+        ;
+    background-size: calc(100%/3) 100%;
+    animation: loading 1s infinite linear;
+}
+
+@keyframes loading {
+   
+    33% {background-size: calc(100%/3) 0,  calc(100%/3) 100%, calc(100%/3) 100%;}
+    50% {background-size: calc(100%/3) 100%,  calc(100%/3) 0, calc(100%/3) 100%;}
+    66% {background-size: calc(100%/3) 100%, calc(100%/3) 100%,  calc(100%/3) 0;
+    }
+  }
+
+   .bubble.assistant {
+    white-space: pre-wrap; /* Păstrează alinierea și liniile noi */
+    word-break: break-word; /* Sparge textul lung */
+    overflow-wrap: anywhere; /* Flexibilitate pentru spargerea textului */
+    overflow-y: auto; /* Scroll pe verticală */
+}
+/* @keyframes loading {
+    0% {
+      background-size: 0 100%, 100% 100%, 0 100%;
+    }
+    33% {
+      background-size: 100% 100%, 0 100%, 100% 100%;
+    }
+    66% {
+      background-size: 100% 100%, 100% 100%, 0 100%;
+    }
+    100% {
+      background-size: 0 100%, 100% 100%, 0 100%;
+    }
+  } */
