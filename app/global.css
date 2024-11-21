@@ -31,13 +31,10 @@ overflow-x: hidden;
     color: #383838;
 }
 
-section { width: 100%;}
+section { width: 100%; }
 
 section.populated{ 
-    /* height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-end; */
+    
     overflow: scroll;
     /* overflow-y: auto; */
     overflow-x: hidden;
@@ -46,7 +43,6 @@ section.populated{
     word-break: break-word; /* Sparge textul lung */
     overflow-wrap: anywhere; /* Flexibilitate pentru spargerea textului */
     overflow-y: auto; /* Scroll pe verticală */
-
 }
 
 .starter-text{
@@ -115,24 +111,32 @@ input:focus{
     width: 100%;
 }
 .prompt-suggestion-button {
-    margin: 8px;
-    padding: 8px;
-    font-size: 15px;
-    border: none;
-    background-color:#b9b4b4 ;
-    border-radius: 8px;
-    /* color: #383838; */
-    color: #fff;
-    cursor: pointer;
-    box-shadow: #959da533 08px 2px;
-    transition: background-color 0.3s ease;
+    
+    background-color: #4CAF50; /* Verde de bază */
+    border: none; /* Elimină conturul implicit */
+    color: white; /* Text alb */
+    padding: 8px; /* Spațiere interioară */
+    text-align: center; /* Centrează textul */
+    text-decoration: none; /* Fără linie sub text */
+     margin: 8px;
+    font-size: 13px; /* Dimensiunea textului */
+    font-weight: bold; /* Font mai îndrăzneț */
+    border-radius: 13px; /* Colțuri rotunjite */
+    transition: all 0.3s ease; /* Tranziții pentru hover */
+    cursor: pointer; /* Mâna pointer pe hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
 }
 .prompt-suggestion-button:hover{
-    background-color: #3e8e41;   
+    /* background-color: #3e8e41;    */
+    background-color: #45a049; /* Verde mai închis pe hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Mai multă umbră */
+    transform: scale(1.05); /* Mărire ușoară pe hover */
 }
 .prompt-suggestion-button:active {
-  background-color: #2e6d33; /* culoarea de fundal la click */
-  transform: translateY(2px); /* efect de mișcare la click */
+   
+  background-color: #3e8e41; /* Verde și mai închis la click */
+  transform: scale(0.98); /* Efect de "apasare" */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Revenire la umbra inițială */
 }
 .loader{    
     margin: 10px;
@@ -162,17 +166,28 @@ input:focus{
     overflow-wrap: anywhere; /* Flexibilitate pentru spargerea textului */
     overflow-y: auto; /* Scroll pe verticală */
 }
-/* @keyframes loading {
-    0% {
-      background-size: 0 100%, 100% 100%, 0 100%;
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 5px;
+        border-radius: 0;
+        height: 100vh;
     }
-    33% {
-      background-size: 100% 100%, 0 100%, 100% 100%;
+    .starter-text{
+        padding: 10px;
+        font-style: normal;
+ }
+    
+    .bubble {
+        font-size: 14px;
+        padding: 8px;
     }
-    66% {
-      background-size: 100% 100%, 100% 100%, 0 100%;
+
+    form {
+        flex-direction: column;
     }
-    100% {
-      background-size: 0 100%, 100% 100%, 0 100%;
+
+    input.question-box, input[type="submit"] {
+        width: 100%;
     }
-  } */
+}

@@ -2,8 +2,8 @@
 import "./global.css" 
 
 export const metadata ={
-    title: "F1Gpt",
-    description:"for all your f1 question"
+    title: "Cultural",
+    description:"for all your cultural values questions"
 }
 
 const RootLayout=({children})=>{
